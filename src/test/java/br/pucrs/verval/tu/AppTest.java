@@ -1,8 +1,10 @@
 package br.pucrs.verval.tu;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import br.pucrs.verval.tu.returnResult.App;
 
 /**
  * Unit test for simple App.
@@ -14,6 +16,10 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        assertTrue(true);
+        
+        String expected = "Intervalo (25,50]";
+        String actual = App.solve(25.01);
+        assertEquals(actual, expected);
+
     }
 }
